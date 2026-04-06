@@ -1,14 +1,12 @@
 /* Table */
 .pricing-table,
-.grid-preview,
-.contact-form {
+.grid-preview {
   padding: 2rem 1rem;
   text-align: center;
 }
 
 .pricing-table > h2,
-.grid-preview > h2,
-.contact-form > h2 {
+.grid-preview > h2 {
   margin-bottom: 2rem;
   font-size: 2rem;
   color: #333;

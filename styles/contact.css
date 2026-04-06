@@ -1,11 +1,23 @@
+/* Form Section */
+.contact-form {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.contact-form > h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
 /* Form */
 form {
   max-width: 600px;
   margin: 2rem auto;
   background: white;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
 /* Inputs */
@@ -19,6 +31,7 @@ textarea {
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 14px;
+  transition: 0.2s ease;
 }
 
 /* Focus effect */
@@ -27,7 +40,7 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: #ff5a5f;
-  box-shadow: 0 0 5px rgba(255, 90, 95, 0.3);
+  box-shadow: 0 0 6px rgba(255, 90, 95, 0.35);
 }
 
 /* Button */
@@ -47,11 +60,11 @@ textarea:focus {
   background: #e04848;
 }
 
-/* Faq */
+/* FAQ Section */
 .faq {
   max-width: 700px;
   margin: 3rem auto;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .faq h3 {
@@ -61,7 +74,7 @@ textarea:focus {
   color: #333;
 }
 
-/* FAQ Card Style */
+/* FAQ Card */
 .faq details {
   background: white;
   border-radius: 10px;
@@ -72,7 +85,6 @@ textarea:focus {
   cursor: pointer;
 }
 
-/* Hover Effect */
 .faq details:hover {
   transform: translateY(-3px);
 }
@@ -97,14 +109,14 @@ textarea:focus {
   position: absolute;
   right: 0;
   font-size: 20px;
-  transition: transform 0.3s ease;
+  transition: 0.3s;
 }
 
-/* When open */
 .faq details[open] summary::after {
   content: "-";
 }
 
+/* Animation */
 .faq details[open] {
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -128,8 +140,7 @@ textarea:focus {
   line-height: 1.5;
 }
 
-/* mobile responsive */
-
+/* Responsive for mobile */
 @media (max-width: 768px) {
   form {
     margin: 1rem;
@@ -146,5 +157,21 @@ textarea:focus {
   .submit-btn {
     font-size: 14px;
     padding: 10px;
+  }
+
+  .faq {
+    margin: 2rem auto;
+  }
+
+  .faq h3 {
+    font-size: 1.5rem;
+  }
+
+  .faq summary {
+    font-size: 14px;
+  }
+
+  .faq p {
+    font-size: 13px;
   }
 }
