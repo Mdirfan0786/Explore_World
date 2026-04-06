@@ -1,0 +1,36 @@
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  background-color: #3b82f6;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.navbar a {
+  color: #e2e8f0;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar a {
+    margin: 0;
+  }
+}

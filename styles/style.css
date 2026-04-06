@@ -1,0 +1,365 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout Setup */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://plus.unsplash.com/premium_photo-1669748157617-a3a83cc8ea23?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 5rem 1rem;
+  color: white;
+}
+
+.btn-primary {
+  color: #e2e8f0;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+/* Grid Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card p {
+  flex-grow: 1;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #2c3e50;
+  flex: 0.5;
+}
+
+.book-btn {
+  background: #ff5a5f;
+  text-align: center;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 0.5;
+}
+
+.book-btn:hover,
+.btn-primary,
+#loadMoreBtn:hover {
+  background: #e04848;
+}
+
+#loadMoreBtn,
+.btn-primary {
+  display: block;
+  max-width: 160px;
+  margin: 20px auto;
+  padding: 10px 16px;
+  border: none;
+  background: #ff5a5f;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.testimonial-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.testimonial p {
+  font-size: 14px;
+  color: #555;
+}
+
+.testimonial strong {
+  display: block;
+  margin-top: 1rem;
+  color: #1e88e5;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+/* Table */
+.pricing-table,
+.grid-preview,
+.contact-form {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.pricing-table > h2,
+.grid-preview > h2,
+.contact-form > h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: #1e88e5;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+td:nth-child(3) {
+  font-weight: bold;
+  color: #1e88e5;
+}
+
+td:nth-child(4) {
+  color: green;
+}
+
+/* Form */
+form {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  width: 100%;
+  max-width: none;
+}
+
+/* Faq */
+.faq {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+.faq h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* FAQ Card Style */
+.faq details {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.faq details:hover {
+  transform: translateY(-3px);
+}
+
+/* Question */
+.faq summary {
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+/* Remove default arrow */
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow */
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* When open */
+.faq details[open] summary::after {
+  content: "-";
+}
+
+.faq details[open] {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Answer */
+.faq p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1rem;
+  }
+
+  .card {
+    padding: 0.8rem;
+  }
+
+  form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .testimonial-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  th,
+  td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
